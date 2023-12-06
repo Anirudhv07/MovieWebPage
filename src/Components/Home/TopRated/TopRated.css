@@ -1,0 +1,9 @@
+.custom-scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on WebKit browsers like Chrome and Safari */
+  }
+  
+  /* Add additional styles for other browsers if needed */
+  .custom-scrollbar-hide {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+  }
