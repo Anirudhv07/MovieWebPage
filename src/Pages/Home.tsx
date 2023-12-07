@@ -10,7 +10,7 @@ import Footer from '../Components/Footer'
 const Home = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
-    <div>
+    <div >
       <MyNavbar />
       <Banner />
       <div className='w-full p-24'>
