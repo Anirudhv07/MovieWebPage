@@ -58,7 +58,7 @@ const Genres = () => {
         <div className='flex flex-row gap-5 overflow-scroll custom-scrollbar-hide'>
             {genres.slice(0,10).map((eachGenres:GenreWithMovies) => {
                 return (
-                    <div key={eachGenres.id}>
+                    <div key={eachGenres.id} className='cursor-pointer'>
 
                     <Card className="w-64 h-100 bg-gray-900 text-white">
                         <CardHeader shadow={false} floated={false} className="h-72 flex flex-col gap-1 bg-gray-900" >
