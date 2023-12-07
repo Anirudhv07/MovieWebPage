@@ -28,8 +28,7 @@ const SearchDialog:React.FC<dialog>=({handleOpen,open})=> {
         event?.preventDefault()
         setSearchMovies(e.target.value)
         const response=await getMoviesBySearch(searchMovies)
-        console.log(response,'search');
-        
+      
         setMovieList(response.results)
         
     }
@@ -39,7 +38,7 @@ const SearchDialog:React.FC<dialog>=({handleOpen,open})=> {
   return (
     <>
      <div className="text-white">
-      <Dialog className="text-white max-h-30px " size="md" open={open} handler={handleOpen} style={{backgroundColor:'black'}}>
+      <Dialog className="text-white max-h-30px " size="md" open={open} handler={handleOpen} style={{backgroundColor:'#1a1a1a'}}>
         <DialogHeader className="text-white flex flex-col">
             <div>
                 <Typography variant="h3">Search</Typography>
