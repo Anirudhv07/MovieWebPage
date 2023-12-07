@@ -50,7 +50,7 @@ const TopRated = () => {
      {displayedMovies.map((eachMovies:any)=>{
         return(
 
-            <div key={eachMovies._id} className='cursor-pointer' onClick={()=>{navigate(`/movie_details/${eachMovies.id}`)}}>
+            <div key={eachMovies.id} className='cursor-pointer' onClick={()=>{navigate(`/movie_details/${eachMovies.id}`)}}>
 
             <Card className="w-60 h-100vh bg-gray-900 text-white">
                 <CardHeader shadow={false} floated={false} className="h-72  bg-gray-900" >
