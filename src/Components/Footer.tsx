@@ -1,12 +1,14 @@
 import { Button, Typography } from '@material-tailwind/react'
-import React from 'react'
+import {  useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate=useNavigate()
+
     return (
         <div className='bg-gray-900 p-16'>
             <div className='flex flex-row justify-between p-16'>
                 <div className='flex flex-col text-gray-700 gap-2'>
-                    <Typography className='text-white' >Home</Typography>
+                    <Typography className='text-white cursor-pointer' onClick={()=>{navigate('/')}}>Home</Typography>
                     <Typography>Categories</Typography>
                     <Typography>Devices</Typography>
                     <Typography>Pricing</Typography>
@@ -15,7 +17,7 @@ const Footer = () => {
 
                 </div>
                 <div className='flex flex-col text-gray-700 gap-2'>
-                    <Typography className='text-white' >Movies</Typography>
+                    <Typography className='text-white cursor-pointer' onClick={()=>{navigate('/')}}>Movies</Typography>
                     <Typography>Genres</Typography>
                     <Typography>Trending</Typography>
                     <Typography>New Release</Typography>
@@ -24,7 +26,7 @@ const Footer = () => {
 
                 </div>
                 <div className='flex flex-col text-gray-700 gap-2'>
-                    <Typography className='text-white' >Show</Typography>
+                    <Typography className='text-white cursor-pointer' onClick={()=>{navigate('/')}}>Show</Typography>
                     <Typography>Genres</Typography>
                     <Typography>Trending</Typography>
                     <Typography>New Release</Typography>
@@ -33,13 +35,13 @@ const Footer = () => {
 
                 </div>
                 <div className='flex flex-col text-gray-700 gap-2'>
-                    <Typography className='text-white' >Support</Typography>
+                    <Typography className='text-white cursor-pointer' onClick={()=>{navigate('/')}}>Support</Typography>
                     <Typography>Contact Us</Typography>
 
 
                 </div>
                 <div className='flex flex-col text-gray-700 gap-2'>
-                    <Typography className='text-white' >Subscription</Typography>
+                    <Typography className='text-white cursor-pointer' onClick={()=>{navigate('/')}}>Subscription</Typography>
                     <Typography>Plans</Typography>
                     <Typography>Features</Typography>
 

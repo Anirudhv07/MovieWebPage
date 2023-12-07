@@ -1,31 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
     Typography,
-    Button,
 } from "@material-tailwind/react";
 import './SimilarMovies.css'
-import { ArrowLeftIcon, ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
-import { UpcomingMovies, getMoviesByGenre } from '../../../apiConnection/api';
-import { Navigate, useNavigate } from "react-router-dom";
+import {  ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
+import {  getMoviesByGenre } from '../../../apiConnection/api';
+import {  useNavigate } from "react-router-dom";
 
-
-
-interface movieDetais{
-    adult:boolean,
-    backdrop_path:string,
-    original_language:string,
-    overview:string,
-    popularity:string,
-    poster_path:string,
-    release_date:string,
-    title:string,
-    vote_average:string,
-    vote_count:string
-}
 
 const SimilarMovies = ({genres}:{genres:string}) => {
     const navigate=useNavigate()

@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
     Typography,
     Button,
 } from "@material-tailwind/react";
-import { ArrowLeftIcon, ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { topRatedMovies } from '../../../apiConnection/api';
 import './TopRated.css'
+import { FlagIcon, StarIcon } from '@heroicons/react/20/solid';
 const itemsPerPage = 5
+import {  useNavigate } from "react-router-dom";
 
 const TopRated = () => {
-    
+    const navigate=useNavigate()
     const[movie,setMovies]=useState([])
 
     useEffect(()=>{
@@ -49,7 +50,7 @@ const TopRated = () => {
      {displayedMovies.map((eachMovies:any)=>{
         return(
 
-            <div key={eachMovies._id}>
+            <div key={eachMovies._id} className='cursor-pointer' onClick={()=>{navigate(`/movie_details/${eachMovies.id}`)}}>
 
             <Card className="w-60 h-100vh bg-gray-900 text-white">
                 <CardHeader shadow={false} floated={false} className="h-72  bg-gray-900" >
@@ -63,11 +64,12 @@ const TopRated = () => {
                 <CardBody>
                     <div className="mb-2 flex items-center justify-between">
                         <Typography className="font-medium truncate flex flex-row gap-2 items-center">
-                            <CalendarIcon  color='white' className='h-4 w-4'/>
-                        {eachMovies.release_date}
+                            <FlagIcon  color='white' className='h-4 w-4'/>
+                        {eachMovies.vote_count}
                         </Typography>
-                        <Typography >
-                            <ArrowRightIcon  color='white' className='h-4 w-4'/>
+                        <Typography className="font-medium truncate flex flex-row gap-2 items-center">
+                            <StarIcon  color='white' className='h-4 w-4'/>
+                            {eachMovies.vote_average}
                         </Typography>
                     </div>
 

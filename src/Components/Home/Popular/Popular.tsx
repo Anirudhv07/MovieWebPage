@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
     Typography,
     Button,
 } from "@material-tailwind/react";
 import './Popular.css'
-import { ArrowLeftIcon, ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import {  popularMovies } from '../../../apiConnection/api';
+import { EyeIcon } from '@heroicons/react/20/solid';
 const itemsPerPage = 5
+import {  useNavigate } from "react-router-dom";
 
 const PopularMovies = () => {
+    const navigate=useNavigate()
     
     const[movie,setMovies]=useState([])
 
@@ -38,6 +40,8 @@ const PopularMovies = () => {
         setPagination(pageNumber)
       setCurrentPage(pageNumber);
     };
+  
+    
   return (
     <div>
       <div className=' gap-6'>
@@ -50,7 +54,7 @@ const PopularMovies = () => {
      {displayedMovies.map((eachMovies:any)=>{
         return(
 
-            <div key={eachMovies._id}>
+            <div key={eachMovies._id} className='cursor-pointer' onClick={()=>{navigate(`/movie_details/${eachMovies.id}`)}}>
 
             <Card className="w-60 h-100vh bg-gray-900 text-white">
                 <CardHeader shadow={false} floated={false} className="h-72  bg-gray-900" >
@@ -64,8 +68,8 @@ const PopularMovies = () => {
                 <CardBody>
                     <div className="mb-2 flex items-center justify-between">
                         <Typography className="font-medium truncate flex flex-row gap-2 items-center">
-                            <CalendarIcon  color='white' className='h-4 w-4'/>
-                        {eachMovies.release_date}
+                            <EyeIcon  color='white' className='h-4 w-4'/>
+                        {eachMovies.popularity}
                         </Typography>
                         <Typography >
                             <ArrowRightIcon  color='white' className='h-4 w-4'/>

@@ -9,6 +9,7 @@ import Footer from '../Components/Footer'
 // import LatestMovies from '../Components/Latest/Latest'
 
 const Home = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
     <div>
       <MyNavbar />

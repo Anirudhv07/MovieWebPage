@@ -1,8 +1,7 @@
 import { Button, Rating, Typography } from '@material-tailwind/react'
-import React, { useState,useEffect } from 'react'
+import  { useState,useEffect } from 'react'
 import { CalendarIcon,LanguageIcon,StarIcon,Squares2X2Icon} from "@heroicons/react/24/solid";
 import { CurrencyDollarIcon, EyeIcon, FlagIcon, GlobeAmericasIcon, ScaleIcon } from '@heroicons/react/20/solid';
-import StarRating from 'react-star-rating-input';
 import SimilarMovies from '../SimilarMovies/SimilarMovies';
 
 const Details = ({ movie }: { movie: any }) => {

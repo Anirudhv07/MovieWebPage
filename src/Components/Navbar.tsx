@@ -2,17 +2,18 @@ import {
     Navbar,
     Typography,
     IconButton,
-    Button,
-    Input,
   } from "@material-tailwind/react";
   
    
 import { MagnifyingGlassIcon,BellIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
 import SearchDialog from "./Search/SearchDialog";
+import { useNavigate } from "react-router-dom";
+
 
 
 const MyNavbar = () => {
+  const navigate=useNavigate()
   const [open, setOpen] = useState(false);
  
   const handleOpen = () => setOpen(!open);
@@ -20,11 +21,11 @@ const MyNavbar = () => {
     return (
         <Navbar
       variant="gradient"
-      color="transparent"
       
-      className="mx-auto max-w-full px-4 py-3 fixed"
+      
+      className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 bg-gray-900"
     >
-      <div className="flex flex-wrap items-center justify-between gap-y-4 text-white">
+      <div className="flex flex-wrap items-center justify-between gap-y-4 text-white cursor-pointer" onClick={()=>{navigate('/')}}>
         <Typography
           as="a"
           href="#"

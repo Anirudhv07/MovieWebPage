@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import MyNavbar from '../Components/Navbar'
 import MovieBanner from '../Components/MoviePage/MovieBanner/MovieBanner'
 import { useParams } from 'react-router-dom'
@@ -107,11 +107,12 @@ const MoviePage = () => {
     const [movie,setMovie]=useState(initialMovieDetails)
     useEffect(()=>{
         getMovieDetails()
-    },[])
+    },[id])
 
     const getMovieDetails=async()=>{
         const response=await movieDetailsById(id as string)
         setMovie(response)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         
     }
 
