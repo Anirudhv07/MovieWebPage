@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
     Typography,
     Button,
 } from "@material-tailwind/react";
@@ -11,22 +10,9 @@ import './UpcomingBangers.css'
 import { ArrowLeftIcon, ArrowRightIcon, CalendarIcon } from "@heroicons/react/24/solid";
 import { UpcomingMovies } from '../../../apiConnection/api';
 const itemsPerPage = 5
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
-
-interface movieDetais{
-    adult:boolean,
-    backdrop_path:string,
-    original_language:string,
-    overview:string,
-    popularity:string,
-    poster_path:string,
-    release_date:string,
-    title:string,
-    vote_average:string,
-    vote_count:string
-}
 
 const UpcomingBangers = () => {
     const navigate=useNavigate()
@@ -54,12 +40,6 @@ const UpcomingBangers = () => {
         setPagination(pageNumber)
       setCurrentPage(pageNumber);
     };
-
-
-    const getMovieDetails=(movie:movieDetais)=>{
-        console.log(movie,'movie');
-        
-    }
   return (
     <div>
       <div className=' gap-6'>

@@ -1,4 +1,3 @@
-import React from 'react'
 import MyNavbar from '../Components/Navbar'
 import Banner from '../Components/Home/Banner/Banner'
 import Genres from '../Components/Home/Genres/Genres'
@@ -6,7 +5,7 @@ import UpcomingBanges from '../Components/Home/UpcomingBangers/UpcomingBanges'
 import TopRated from '../Components/Home/TopRated/TopRated'
 import PopularMovies from '../Components/Home/Popular/Popular'
 import Footer from '../Components/Footer'
-// import LatestMovies from '../Components/Latest/Latest'
+
 
 const Home = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -19,7 +18,7 @@ const Home = () => {
 
     <Genres />
     <UpcomingBanges />
-    {/* <LatestMovies /> */}
+   
     <TopRated />
     <PopularMovies />
   </div>

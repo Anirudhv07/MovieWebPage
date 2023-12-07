@@ -19,12 +19,6 @@ export const UpcomingMovies= async()=>{
     return response.data
 }
 
-export const latestMovies= async()=>{
-    const response=await baseURL.get(`/discover/movie?api_key=${process.env.API_KEY}`)
-    
-    return response
-}
-
 export const topRatedMovies= async()=>{
     const response=await baseURL.get(`/movie/top_rated?api_key=${process.env.API_KEY}`)
     return response.data

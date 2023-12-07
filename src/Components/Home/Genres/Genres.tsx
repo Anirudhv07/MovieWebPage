@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
     Typography,
-    Button,
 } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 import './Genres.css'
 import { getAllGenres, getMoviesByGenre } from '../../../apiConnection/api';
 
-interface eachGenres{
-    id:string,
-    name:string
-}
+
 interface GenresResponse {
     id: string;
     name: string;
@@ -52,7 +47,6 @@ const Genres = () => {
         setGenres(genresWithMovies);
       };
 
-      console.log(genres,'gnere');
       
     return (
         

@@ -1,4 +1,3 @@
-import React from 'react'
 import './Banner.css'
 import { Button, Typography } from '@material-tailwind/react'
 import { PlayIcon } from "@heroicons/react/24/solid";
