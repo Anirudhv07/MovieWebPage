@@ -25,12 +25,13 @@ const MyNavbar = () => {
       
       className="sticky top-0 z-10 h-max max-w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 bg-gray-900"
     >
-      <div className="flex flex-wrap items-center justify-between gap-y-4 text-white cursor-pointer" onClick={()=>{navigate('/')}}>
+      <div className="flex flex-wrap items-center justify-between gap-y-4 text-white cursor-pointer" >
         <Typography
           as="a"
           href="#"
           variant="h6"
           className="mr-4 ml-2 cursor-pointer py-1.5"
+            onClick={()=>{navigate('/')}}
         >
           Utsav
         </Typography>
