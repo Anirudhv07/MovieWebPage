@@ -32,7 +32,10 @@ const SearchDialog:React.FC<dialog>=({handleOpen,open})=> {
         setMovieList(response.results)
         
     }
-    
+    const selectMovie=(id:string)=>{
+      {navigate(`/movie_details/${id}`)}
+      handleOpen()
+    }
     
  
   return (
@@ -53,7 +56,7 @@ const SearchDialog:React.FC<dialog>=({handleOpen,open})=> {
                 {movieList.map((movie:any)=>{
                     return(
                         <>
-                        <div className="flex flex-row gap-3 cursor-pointer" onClick={()=>{navigate(`/movie_details/${movie.id}`)}}>
+                        <div className="flex flex-row gap-3 cursor-pointer" onClick={()=>selectMovie(movie.id)}>
 
                         <Avatar src={process.env.IMAGE_BASE_URL+movie.poster_path} alt="avatar" variant="square" />
                         <Typography>{movie.title}</Typography>
