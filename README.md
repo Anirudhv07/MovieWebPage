@@ -1,5 +1,5 @@
 Step 1: Clone or download MovieWebPage ,
-Step 2: Go to the folder MovieWebPage and in terminal type- npm install and run to install all the dependencies,
+Step 2: Go to the folder MovieWebPage and in terminal type- npm install,to install all the dependencies,
 Step 3: Create a '.env' file inside the main folder and add-
     API_KEY = {{YOUR API KEY}}
     BASE_URL = https://api.themoviedb.org/3/
